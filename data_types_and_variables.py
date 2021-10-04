@@ -24,4 +24,4 @@ can_take_class = can_enroll and not schedule_conflict
 print(can_take_class)
 
 
-amount
+def product_offer(amount_purchased, )
