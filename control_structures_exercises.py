@@ -71,6 +71,7 @@ while i >= 5:
     print(i)
     i -= 5
 
+
 # 2.b.i. Write some code that prompts the user for a number, then shows a multiplication table up through 10 for that number
 
 i = 1
@@ -79,12 +80,14 @@ while i <= 10:
     print(user_number, 'x', i, '=', user_number * i)
     i += 1
 
+
 # 2.b.ii
 
 i = 1
 while i < 10:
     print(str(i) * i)
     i += 1
+
 
 # 2.c Break and Continue
 
@@ -103,8 +106,10 @@ for n in range(50):
             print('Yikes! Skipping this number:', n)
         else:
             print(f'Here is an odd number: {n}')
-    
+   
 
+
+# 2.d
 '''The input function can be used to prompt for input and use that input in your python code. Prompt the user to enter a positive number and write a 
 loop that counts from 0 to that number. (Hints: first make sure that the value the user entered is a valid number, also note that the input function 
 returns a string, so you'll need to convert this to a numeric type.'''
@@ -113,7 +118,88 @@ while True:
     user_i = input('Please input a positive number:')
     if user_i.isdigit() == True and int(user_i) > 0:
         break
-for n in range(int(user_i)):
+for n in range(int(user_i) + 1):
     print(n)
+
+
+# 2.e
+
+while True:
+    user_input = input('Please input a positive number:')
+    if user_input.isdigit() == True and int(user_input) > 0:
+        break
+for n in range(0, int(user_input)):
+    print(int(user_input))
+    user_input = int(user_input) - 1
+    if int(user_input) < 1:
+        break
+
+
+# 3. Fizzbuzz
+for n in range(1, 101):
+    if n % 3 == 0 and n % 5 == 0:
+        print('FizzBuzz')
+    elif n % 5 == 0:
+        print('Buzz')
+    elif n % 3 == 0:
+        print('Fizz')
+    else:
+        print(n)
+
+
+# 4. Display a table of powers.
+
+user_input = input('What number would you like to go to: ')
+print('Here is your table!')
+print('number   |   squared  |  cubed   ')
+print('_________________________________')
+
+for n in range(1, int(user_input)):
+    print(n,'      |',n ** 2,'      |', n ** 3)
+
+
+# 5. Convert given number grades into letter grades.
+
+
+while True:
+    grade = input('Please input the student\'s grade: ')
+    if int(grade) <= 59:
+        print('Student grade: F')
+    elif int(grade) <= 66:
+        print('Student grade: D')
+    elif int(grade) <= 79:
+        print('Student grade: C')
+    elif int(grade) <= 87:
+        print('Student grade: B')
+    else:
+        print('Student grade: A')
+    more = input('Would you like to input another grade? (Y/N)')
+    if more.lower() == 'n':
+        break
+
+
+# 6. Create a list of dictionaries where each dictionary contains a book that you have read. Each dictionary should have the keys
+# 'title', 'author', and 'genre'. Loop through the list and print out information about each book.
+
+the_books_that_i_have_read = [
+    {'title': 'The Wind Up Bird Chronicle', 'author': 'Haruki Murakami', 'genre': 'Surrealism'},
+    {'title': 'The 13 1/2 Lives of Captain Bluebear', 'author': 'Walter Moers', 'genre': 'Fantasy'},
+    {'title': 'White Teeth', 'author': 'Zadie Smith', 'genre': 'Drama'},
+    {'title': 'The City of Dreaming Books', 'author': 'Walter Moers', 'genre': 'Fantasy'},
+    {'title': '1Q84', 'author': 'Haruki Murakami', 'genre': 'Surrealism'},
+    {'title': 'Norwegian Wood', 'author': 'Haruki Murakami', 'genre': 'Surrealism'},
+    {'title': 'Colorless Tsukuru Tazaki and his Years of Pilgrimage', 'author': 'Haruki Murakami', 'genre': 'Surrealism'},
+    {'title': 'Kafka on the Shore', 'author': 'Haruki Murakami', 'genre': 'Surrealism'},
+    {'title': 'Men Without Women', 'author': 'Haruki Murakami', 'genre': 'Short Stories'},
+    {'title': 'Rumo and His Miraculous Adventures', 'author': 'Walter Moers', 'genre': 'Fantasy'},
+    {'title': 'The Origin of Species', 'author': 'Charles Darwin', 'genre': 'Science Literature'},
+    {'title': 'Elementary Korean', 'author': 'Ross King & Jaehoon Yeon', 'genre': 'Language'},
+]
+
+user_input = input('Please choose a genre: ')
+for book in the_books_that_i_have_read:
+    if book['genre'] == user_input:
+        print(book['title'])
+           
 
 
