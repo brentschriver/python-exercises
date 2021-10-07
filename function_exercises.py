@@ -121,10 +121,6 @@ def calculate_tip(tip, bill_total):
     # Create the variable 'amount_to_tip' and set it equal to the argument passed into 'tip' multiplied by the argument passed into 'bill_total', then return the variable 'amount_to_tip'.
     amount_to_tip = tip * bill_total
     return amount_to_tip
-print(calculate_tip(.20, 8))
-print(calculate_tip(3,20))
-print(calculate_tip('How much to tip?', 8))
-print(calculate_tip('brent', 'schriver'))
 '''
 Walkthrough
 1. When the arguments '.20' and '8' are passed into the 'calculate_tip' function, the function will multiply the two numbers together and RETURN the result:
@@ -229,5 +225,5 @@ def cumulative_sum(array):
     return cumulative_sum_list
     
 
-
+print(cumulative_sum([1,2,3,4,5]))
 
