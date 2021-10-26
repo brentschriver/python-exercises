@@ -144,10 +144,18 @@ Walkthrough
 
 # 6. Define a function named apply_discount. It should accept a original price, and a discount percentage, and return the price after the discount is applied.
 
-
+# Create a function called 'apply_discount' that takes two parameters 'original_price' and 'discount_percentage'.
 def apply_discount(original_price, discount_percentage):
+    # Create a variable called 'new_price' and have it store the result of the mathematical operation of taking the argument passed into 'original_price' and 
+    # multiplying it by the value of 1 minus the argument passed into discount_percentage and returns that value.
     new_price = original_price * (1 - discount_percentage)
     return new_price
+'''
+Walkthrough
+1. When the arguments '100' and '80' are passed into 'original_price' and 'discount_percentage', respectively, the function will return
+
+    --> print(apply_discount(100, 80))
+'''
 
 
 
@@ -209,7 +217,6 @@ def normalize_name(string):
     return string
 
 
-
 # 11. Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
 
 def cumulative_sum(array):
@@ -225,5 +232,11 @@ def cumulative_sum(array):
     return cumulative_sum_list
     
 
-print(cumulative_sum([1,2,3,4,5]))
+def string_cheese_to_processed_cheese(money_string):
+    string_cheese = money_string.strip('$').replace(',','')
+    processed_cheese = float(string_cheese)
+    return processed_cheese
+
+
+
 
