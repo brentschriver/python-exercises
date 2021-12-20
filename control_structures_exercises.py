@@ -108,8 +108,8 @@ for n in range(50):
             print(f'Here is an odd number: {n}')
    
 
+ # 2.d
 
-# 2.d
 '''The input function can be used to prompt for input and use that input in your python code. Prompt the user to enter a positive number and write a 
 loop that counts from 0 to that number. (Hints: first make sure that the value the user entered is a valid number, also note that the input function 
 returns a string, so you'll need to convert this to a numeric type.'''

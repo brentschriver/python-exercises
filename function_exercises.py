@@ -1,4 +1,4 @@
-# 1. Define a function named is_two. It should accept one input and return True if the passed input is either the number or the string 2, False otherwise.
+    # 1. Define a function named is_two. It should accept one input and return True if the passed input is either the number or the string 2, False otherwise.
 
 # Our is_two defines a single parameter, x that is an integer, and will return Boolean value
 def is_two(x):
